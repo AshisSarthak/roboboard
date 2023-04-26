@@ -6,7 +6,8 @@ export enum DIRECTION_ENUM {
 }
 
 export interface RoboBoardState{
-    positionX: string | number;
-    positionY: string | number;
+    positionX: number;
+    positionY: number;
     face: DIRECTION_ENUM;
+    dimension: number
 }

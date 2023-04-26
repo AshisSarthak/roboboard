@@ -4,30 +4,30 @@ import { DIRECTION_ENUM } from "../context/types";
 
 export const useMoveRobots = () => {
   const { state, dispatch } = useContext(RoboBoardContext);
-  const { face, positionX, positionY } = state;
+  const { face, positionX, positionY, dimension } = state;
   const move = () => {
     if (face === DIRECTION_ENUM.NORTH) {
       dispatch({
         type: "MOVEY",
-        payload: +positionY <= 3 ? 1 : 0,
+        payload: +positionY < dimension - 1 ? 1 : 0,
       });
     }
     if (face === DIRECTION_ENUM.SOUTH) {
       dispatch({
         type: "MOVEY",
-        payload: +positionY >= 1 ? -1 : 0,
+        payload: +positionY > 0 ? -1 : 0,
       });
     }
     if (face === DIRECTION_ENUM.EAST) {
       dispatch({
         type: "MOVEX",
-        payload: +positionX < 4 ? 1 : 0,
+        payload: +positionX < dimension - 1 ? 1 : 0,
       });
     }
     if (face === DIRECTION_ENUM.WEST) {
       dispatch({
         type: "MOVEX",
-        payload: +positionX >= 1 ? -1 : 0,
+        payload: +positionX > 0 ? -1 : 0,
       });
     }
   };

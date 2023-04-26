@@ -1,41 +1,39 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { RoboBoardContext } from "../../context";
 import { Box, Container, Grid, Paper, styled } from "@mui/material";
 import Robot from "../robot";
+import "./board.css";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: 30,
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
+interface IBoardProps {
+  dimension: number;
+}
 
-const Board = () => {
+const Board = (props: IBoardProps) => {
+  const { dimension } = props;
   const {
     state: { positionX, positionY },
     dispatch,
   } = useContext(RoboBoardContext);
 
-  const getBoxContent = (x: number, y: number) => {
-    if (x === positionX && y === positionY) {
-      return <Robot />;
-    }
-  };
+  useEffect(() => {
+    dispatch({
+      type: "SET_DIMENSION",
+      payload: dimension,
+    });
+  }, [dimension, dispatch]);
 
   const createBoxes = () => {
     const boxes = [];
-    for (let i = 4; i >= 0; i--) {
-      for (let j = 4; j >= 0; j--) {
+    for (let i = dimension - 1; i >= 0; i--) {
+      for (let j = dimension - 1; j >= 0; j--) {
         boxes.push(
           <Box
             sx={{
               height: "100px",
               width: "100px",
-              border: "1px solid #ccc",
             }}
           >
-            {getBoxContent(j, i)}
+            <Robot posX={j} posY={i} />
           </Box>
         );
       }
@@ -46,11 +44,11 @@ const Board = () => {
   return (
     <Container maxWidth="md">
       <Box
+        className="board-box"
         sx={{
-          display: "grid",
-          "grid-template-columns": "repeat(5, 100px)",
-          direction: "rtl",
-          justifyContent: "center",
+        "grid-template-columns": `repeat(${dimension}, 100px)`,
+          height: `${dimension * 100}px`,
+          width: `${dimension * 100}px`,
         }}
       >
         {createBoxes()}

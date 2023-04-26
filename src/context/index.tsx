@@ -6,6 +6,7 @@ const initialState: RoboBoardState = {
   positionX: 0,
   positionY: 0,
   face: DIRECTION_ENUM.NORTH,
+  dimension: 5,
 };
 
 interface RoboBoardContextProps {
@@ -22,7 +23,7 @@ function RoboBoardContextProvider(props: any) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <RoboBoardContext.Provider value={{state: {...state}, dispatch}}>
+    <RoboBoardContext.Provider value={{ state: { ...state }, dispatch }}>
       {props.children}
     </RoboBoardContext.Provider>
   );

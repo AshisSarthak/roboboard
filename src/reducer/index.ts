@@ -3,7 +3,6 @@ import { RoboBoardState } from "../context/types";
 import { ACTIONS } from "./actions";
 
 export const reducer = (state: RoboBoardState, action: any) => {
-    console.log("action",action)
   switch (action.type) {
     case "MOVEX":
       return {
@@ -19,6 +18,11 @@ export const reducer = (state: RoboBoardState, action: any) => {
       return {
         ...state,
         face: action.payload,
+      };
+    case "SET_DIMENSION":
+      return {
+        ...state,
+        dimension: action.payload,
       };
     default:
       return { ...state };

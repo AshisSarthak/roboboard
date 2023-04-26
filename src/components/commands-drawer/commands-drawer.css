@@ -1,0 +1,10 @@
+.commands-header {
+  padding: 10px;
+  text-align: center;
+}
+.commands-body {
+  padding: 20px;
+}
+.commands-footer {
+  margin-top: 15px;
+}

@@ -1,0 +1,76 @@
+.direction-arrow:before {
+  content: "";
+  right: 0;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.north:before {
+  top: -100%;
+  border-bottom: 30px solid rgba(60, 179, 113, 0.6);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+.invalid-north {
+  background-color: rgba(247, 21, 70, 0.831);
+}
+.invalid-north:before {
+  border-bottom-color: rgba(247, 21, 70, 0.831);
+}
+
+.east:before {
+  right: -100%;
+  border-left: 30px solid rgba(60, 179, 113, 0.6);
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+.invalid-east {
+  background-color: rgba(247, 21, 70, 0.831);
+}
+.invalid-east:before {
+  border-left-color: rgba(247, 21, 70, 0.831);
+}
+
+.west:before {
+  right: 100%;
+  border-right: 30px solid rgba(60, 179, 113, 0.6);
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+.invalid-west {
+  background-color: rgba(247, 21, 70, 0.831);
+}
+.invalid-west:before {
+  border-right-color: rgba(247, 21, 70, 0.831);
+}
+
+.south:before {
+  bottom: -100%;
+  border-top: 30px solid rgba(60, 179, 113, 0.6);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.invalid-south {
+  background-color: rgba(247, 21, 70, 0.831);
+}
+.invalid-south:before {
+  border-top-color: rgba(247, 21, 70, 0.831);
+}
+
+.robot {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url(../../robot-line-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.valid-direction{
+    background-color: rgba(60, 179, 113, 0.6);
+}
