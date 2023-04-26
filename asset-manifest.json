@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/roboboard/static/css/main.002d4519.css",
+    "main.js": "/roboboard/static/js/main.026c2661.js",
+    "static/js/787.0fb99c6c.chunk.js": "/roboboard/static/js/787.0fb99c6c.chunk.js",
+    "static/media/robot-line-icon.svg": "/roboboard/static/media/robot-line-icon.88fd3fab37a971c64730.svg",
+    "index.html": "/roboboard/index.html",
+    "main.002d4519.css.map": "/roboboard/static/css/main.002d4519.css.map",
+    "main.026c2661.js.map": "/roboboard/static/js/main.026c2661.js.map",
+    "787.0fb99c6c.chunk.js.map": "/roboboard/static/js/787.0fb99c6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.002d4519.css",
+    "static/js/main.026c2661.js"
+  ]
+}
