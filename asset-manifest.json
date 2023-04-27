@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/roboboard/static/css/main.d66ff976.css",
+    "main.js": "/roboboard/static/js/main.2e1bb4cb.js",
+    "static/js/787.0fb99c6c.chunk.js": "/roboboard/static/js/787.0fb99c6c.chunk.js",
+    "index.html": "/roboboard/index.html",
+    "main.d66ff976.css.map": "/roboboard/static/css/main.d66ff976.css.map",
+    "main.2e1bb4cb.js.map": "/roboboard/static/js/main.2e1bb4cb.js.map",
+    "787.0fb99c6c.chunk.js.map": "/roboboard/static/js/787.0fb99c6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d66ff976.css",
+    "static/js/main.2e1bb4cb.js"
+  ]
+}
