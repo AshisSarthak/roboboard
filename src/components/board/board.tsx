@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { RoboBoardContext } from "../../context";
-import { Box, Container, Grid, Paper, styled } from "@mui/material";
+import { Alert, Box, Snackbar } from "@mui/material";
 import Robot from "../robot";
 import "./board.css";
+import { InfoBox } from "../info-box/info-box";
 
 interface IBoardProps {
   dimension: number;
@@ -11,9 +12,13 @@ interface IBoardProps {
 const Board = (props: IBoardProps) => {
   const { dimension } = props;
   const {
-    state: { positionX, positionY },
+    state: { error },
     dispatch,
   } = useContext(RoboBoardContext);
+  const [_open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     dispatch({
@@ -22,38 +27,29 @@ const Board = (props: IBoardProps) => {
     });
   }, [dimension, dispatch]);
 
-  const createBoxes = () => {
-    const boxes = [];
-    for (let i = dimension - 1; i >= 0; i--) {
-      for (let j = dimension - 1; j >= 0; j--) {
-        boxes.push(
-          <Box
-            sx={{
-              height: "100px",
-              width: "100px",
-            }}
-          >
-            <Robot posX={j} posY={i} />
-          </Box>
-        );
-      }
-    }
-    return boxes;
-  };
-
   return (
-    <Container maxWidth="md">
+    <Box className="board-container">
+      {error && (
+        <Snackbar open={!!error} autoHideDuration={2000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
+            {error}
+          </Alert>
+        </Snackbar>
+      )}
+      <Box>
+        <InfoBox />
+      </Box>
       <Box
         className="board-box"
         sx={{
-        "grid-template-columns": `repeat(${dimension}, 100px)`,
+          "grid-template-columns": `repeat(${dimension}, 100px)`,
           height: `${dimension * 100}px`,
           width: `${dimension * 100}px`,
         }}
       >
-        {createBoxes()}
+        <Robot />
       </Box>
-    </Container>
+    </Box>
   );
 };
 

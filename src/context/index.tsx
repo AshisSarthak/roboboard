@@ -1,11 +1,10 @@
 import React, { useReducer, createContext } from "react";
 import { reducer } from "../reducer";
-import { DIRECTION_ENUM, RoboBoardState } from "./types";
+import { RoboBoardState } from "./types";
 
 const initialState: RoboBoardState = {
-  positionX: 0,
-  positionY: 0,
-  face: DIRECTION_ENUM.NORTH,
+  positionX: Infinity,
+  positionY: Infinity,
   dimension: 5,
 };
 

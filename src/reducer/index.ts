@@ -1,28 +1,66 @@
-import { ReducerWithoutAction } from "react";
 import { RoboBoardState } from "../context/types";
+import { OUT_OF_BOUND } from "../utils/constants";
 import { ACTIONS } from "./actions";
 
 export const reducer = (state: RoboBoardState, action: any) => {
   switch (action.type) {
-    case "MOVEX":
+    case ACTIONS.SET_ROBOT: {
+      const { posX, posY, face } = action.payload;
+      return {
+        ...state,
+        positionX: posX,
+        positionY: posY,
+        face: face.toLowerCase(),
+      };
+    }
+    case ACTIONS.MOVEX:
       return {
         ...state,
         positionX: state.positionX + action.payload,
+        ...(action.payload !== 0
+          ? {
+              userGivenCommands: [...(state?.userGivenCommands || []), "MOVE"],
+              error: "",
+            }
+          : {
+              error: OUT_OF_BOUND,
+            }),
       };
-    case "MOVEY":
+    case ACTIONS.MOVEY:
       return {
         ...state,
         positionY: state.positionY + action.payload,
+        ...(action.payload !== 0
+          ? {
+              userGivenCommands: [...(state?.userGivenCommands || []), "MOVE"],
+              error: "",
+            }
+          : {
+              error: OUT_OF_BOUND,
+            }),
       };
-    case "TURN":
+    case ACTIONS.TURN:
       return {
         ...state,
         face: action.payload,
       };
-    case "SET_DIMENSION":
+    case ACTIONS.SET_DIMENSION:
       return {
         ...state,
         dimension: action.payload,
+      };
+    case ACTIONS.SET_COMMANDS:
+      return {
+        ...state,
+        userGivenCommands: [
+          ...(state?.userGivenCommands || []),
+          action.payload,
+        ],
+      };
+    case ACTIONS.SET_ERROR:
+      return {
+        ...state,
+        error: action.payload,
       };
     default:
       return { ...state };

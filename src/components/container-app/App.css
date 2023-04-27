@@ -7,3 +7,9 @@ body,
 .robo-header {
   padding: 10px;
 }
+
+.container-box {
+  display: grid;
+  height: 100%;
+  grid-template-columns: minmax(100px, 1fr) 400px;
+}

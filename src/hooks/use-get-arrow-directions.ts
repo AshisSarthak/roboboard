@@ -7,12 +7,27 @@ export const useGetArrowDirections = () => {
     state: { positionX, positionY, face, dimension },
   } = useContext(RoboBoardContext);
 
+  const getPositionX = () => {
+    if (positionX) {
+      return `${positionX * 100}px`;
+    }
+    return "0px";
+  };
+
+  const getPositionY = () => {
+    if (positionY) {
+      return `${positionY * 100}px`;
+    }
+    return "0px";
+  };
+
   const getInvalidMoveArrow = () => {
     if (positionX === 0 && face === DIRECTION_ENUM.WEST) {
       return "invalid-west";
     }
     if (
-      ((positionX === 0 && positionY === 0) ||
+      (positionX === 0 ||
+        positionY === 0 ||
         (positionX === dimension - 1 && positionY === 0)) &&
       face === DIRECTION_ENUM.SOUTH
     ) {
@@ -27,5 +42,5 @@ export const useGetArrowDirections = () => {
     return "valid-direction";
   };
 
-  return { getInvalidMoveArrow };
+  return { getInvalidMoveArrow, getPositionX, getPositionY };
 };
