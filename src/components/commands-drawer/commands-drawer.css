@@ -8,3 +8,20 @@
 .commands-footer {
   margin-top: 15px;
 }
+.executed-commands {
+  background-color: #666;
+  overflow-y: auto;
+  padding-inline: 10px;
+  height: calc(100% - 199px);
+}
+
+.instructions-box {
+  background-color: gray;
+  padding-inline: 10px;
+}
+.box-header {
+  padding: 10px;
+  font-weight: 300;
+  font-size: 20px;
+  color: white;
+}

@@ -63,14 +63,14 @@
 }
 
 .robot {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background-image: url(../../robot-line-icon.svg);
+  height: 100px;
+  width: 100px;
+  background-image: url(../../robot-vacuum-cleaner.png);
   background-repeat: no-repeat;
   background-position: center;
-  
+  position: absolute;
+  transition: all 1s ease 0s;
 }
-.valid-direction{
-    background-color: rgba(60, 179, 113, 0.6);
+.valid-direction {
+  background-color: rgba(60, 179, 113, 0.6);
 }
