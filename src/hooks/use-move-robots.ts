@@ -8,7 +8,7 @@ export const useMoveRobots = () => {
   const { state, dispatch } = useContext(RoboBoardContext);
   const { face, positionX, positionY, dimension } = state;
 
-  const placeRobot = ([posX, posY, face]: any) => {
+  const placeRobot = (posX: number, posY: number, face: DIRECTION_ENUM) => {
     if (
       isNaN(posX) ||
       isNaN(posY) ||
@@ -20,8 +20,8 @@ export const useMoveRobots = () => {
       });
     } else {
       dispatch({
-        type: ACTIONS.SET_COMMANDS,
-        payload: `PLACE: ${posX}, ${posY}, ${face} `,
+        type: ACTIONS.IS_PLACED,
+        payload: true,
       });
       dispatch({
         type: ACTIONS.SET_ERROR,
@@ -36,6 +36,25 @@ export const useMoveRobots = () => {
         },
       });
     }
+  };
+
+  const resetRobot = () => {
+    dispatch({
+      type: ACTIONS.IS_PLACED,
+      payload: false,
+    });
+    dispatch({
+      type: ACTIONS.SET_ERROR,
+      payload: "",
+    });
+    dispatch({
+      type: ACTIONS.SET_ROBOT,
+      payload: {
+        posX: -1,
+        posY: -1,
+        face: "",
+      },
+    });
   };
   const move = () => {
     if (face === DIRECTION_ENUM.NORTH) {
@@ -114,11 +133,8 @@ export const useMoveRobots = () => {
     });
   };
   const report = () => {
-    dispatch({
-      type: ACTIONS.SET_COMMANDS,
-      payload: `OUTPUT: ${positionX}, ${positionY}, ${face} `,
-    });
+    return { positionX, positionY, face };
   };
 
-  return { move, turnLeft, turnRight, report, placeRobot };
+  return { move, turnLeft, turnRight, report, placeRobot, resetRobot };
 };

@@ -62,6 +62,11 @@ export const reducer = (state: RoboBoardState, action: any) => {
         ...state,
         error: action.payload,
       };
+    case ACTIONS.IS_PLACED:
+      return {
+        ...state,
+        isPlaced: action.payload,
+      };
     default:
       return { ...state };
   }

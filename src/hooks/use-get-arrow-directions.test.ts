@@ -1,7 +1,6 @@
 import { useGetArrowDirections } from "./use-get-arrow-directions";
 import { renderHook } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
-import { useParseCommands } from "./use-parse-commands";
 
 jest.mock("../context");
 
@@ -20,7 +19,6 @@ jest.mock("./use-move-robots.ts", () => ({
 
 describe("useGetArrowDirections", () => {
   const { result } = renderHook(() => useGetArrowDirections());
-  const { result: parseCommands } = renderHook(() => useParseCommands());
 
   it("get row directions", () => {
     act(() => {
@@ -38,7 +36,6 @@ describe("useGetArrowDirections", () => {
 
   it("get position X for 0", () => {
     act(() => {
-      parseCommands.current.handleParseCommands("PLACE 0,0,EAST");
       const res = result.current.getPositionX();
       expect(res).toEqual("Infinitypx");
     });

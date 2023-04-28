@@ -9,6 +9,7 @@ describe("testingReducers", () => {
         positionY: 0,
         face: DIRECTION_ENUM.EAST,
         dimension: 5,
+        isPlaced: true,
       },
       {
         type: "MOVEX",
@@ -27,6 +28,7 @@ describe("testingReducers", () => {
         face: DIRECTION_ENUM.EAST,
         dimension: 5,
         userGivenCommands: [],
+        isPlaced: true,
       },
       {
         type: "MOVEX",
@@ -45,6 +47,7 @@ describe("testingReducers", () => {
         face: DIRECTION_ENUM.WEST,
         dimension: 5,
         userGivenCommands: [],
+        isPlaced: true,
       },
       {
         type: "MOVEX",
@@ -61,6 +64,7 @@ describe("testingReducers", () => {
         positionY: 0,
         face: DIRECTION_ENUM.NORTH,
         dimension: 5,
+        isPlaced: true,
       },
       {
         type: "MOVEY",
@@ -79,6 +83,7 @@ describe("testingReducers", () => {
         face: DIRECTION_ENUM.NORTH,
         dimension: 5,
         userGivenCommands: [],
+        isPlaced: true,
       },
       {
         type: "MOVEY",
@@ -97,6 +102,7 @@ describe("testingReducers", () => {
         face: DIRECTION_ENUM.SOUTH,
         dimension: 5,
         userGivenCommands: [],
+        isPlaced: true,
       },
       {
         type: "MOVEY",
@@ -115,6 +121,7 @@ describe("testingReducers", () => {
         face: DIRECTION_ENUM.SOUTH,
         dimension: 5,
         userGivenCommands: [],
+        isPlaced: true,
       },
       {
         type: "TURN",
@@ -132,6 +139,7 @@ describe("testingReducers", () => {
         face: DIRECTION_ENUM.SOUTH,
         dimension: 5,
         userGivenCommands: [],
+        isPlaced: true,
       },
       {
         type: "HELLO",

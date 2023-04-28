@@ -11,5 +11,12 @@ body,
 .container-box {
   display: grid;
   height: 100%;
-  grid-template-columns: minmax(100px, 1fr) 400px;
+  grid-template-rows: minmax(80px, 1fr) 2fr;
+}
+
+@media (max-width: 400px) {
+  .container-box {
+    grid-template-rows: 1fr;
+    row-gap: 10px;
+  }
 }

@@ -9,3 +9,11 @@ export const OUT_OF_BOUND =
   "Robot is at the edge of the board. Can not move in this direction";
 
 export const INVALID_ROBOT_PLACE = "Invalid values passed to Place the robot";
+
+export const INVALID_ROBOT_X = "Invalid Value for X";
+export const INVALID_ROBOT_Y = "Invalid Value for Y";
+export const INVALID_ROBOT_FACE = "Invalid Direction";
+
+export const LABEL_X = "Enter X";
+export const LABEL_Y = "Enter Y";
+export const LABEL_DIRECTION = "Enter Face Direction";
