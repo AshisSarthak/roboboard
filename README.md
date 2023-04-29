@@ -1,14 +1,18 @@
-# Getting Started with Create React App
+# Robot Vaccum App
 
-# A first-level heading
+This is a small App that conatins a 5x5 board on which a robot can move.
 
-This is a small App that conatins a 5x5 board on which a robot can move
-The Robot has to be placed properly on the board first. (_Place Robot_)
+The Robot has to be placed properly on the board first. **(Place Robot)**
+
 Post that All navigation links will be enabled
-You can _Move_ the Robot
-_Turn_ the Robot to the _left_ or the _Right_
-Get the Current Coordinates of the Robot (_Reoport_)
-To Reset the Board you can click on _Reset_
+
+You can **Move** the Robot
+
+**Turn** the Robot to the **LEFT** or the **RIGHT**
+
+Get the Current Coordinates of the Robot (**Reoport**)
+
+To Reset the Board you can click on **Reset**
 
 Demo of this Application is available at [https://ashissarthak.github.io/roboboard/](https://ashissarthak.github.io/roboboard/)
 
