@@ -1,5 +1,5 @@
-import React, { useReducer, createContext } from "react";
-import { reducer } from "../reducer";
+import React, { useReducer, createContext, Dispatch } from "react";
+import { ACTIONS_MAP, reducer } from "../reducer";
 import { DIRECTION_ENUM, RoboBoardState } from "./types";
 
 const initialState: RoboBoardState = {
@@ -12,11 +12,12 @@ const initialState: RoboBoardState = {
 
 interface RoboBoardContextProps {
   state: RoboBoardState;
-  dispatch?: any;
+  dispatch: Dispatch<ACTIONS_MAP>;
 }
 
 const RoboBoardContext = createContext<RoboBoardContextProps>({
   state: initialState,
+  dispatch: () => {},
 });
 RoboBoardContext.displayName = "RoboBoardContext";
 

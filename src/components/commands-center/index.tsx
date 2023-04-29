@@ -22,7 +22,7 @@ const DEFAULT_REPORT_CONTENT = {
 
 export const CommandsCenter = () => {
   const { state } = useContext(RoboBoardContext);
-  const { dimension, isPlaced } = state;
+  const { dimension, isPlaced, face } = state;
   const { move, placeRobot, turnLeft, turnRight, resetRobot, report } =
     useMoveRobots();
   const [showReport, setShowReport] = useState<boolean>(false);
@@ -48,10 +48,10 @@ export const CommandsCenter = () => {
         />
         <VacuumNavigation
           isPlaced={isPlaced}
-          move={move}
+          move={() => move(face as DIRECTION_ENUM)}
           report={handleShowReport}
-          turnLeft={turnLeft}
-          turnRight={turnRight}
+          turnLeft={() => turnLeft(face as DIRECTION_ENUM)}
+          turnRight={() => turnRight(face as DIRECTION_ENUM)}
         />
         <ReportDialog
           open={showReport}

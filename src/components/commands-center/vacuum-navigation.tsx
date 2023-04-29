@@ -3,10 +3,10 @@ import "./commands-center.css";
 
 interface IVacuumNavigationProps {
   isPlaced: boolean;
-  move: any;
-  report: any;
-  turnLeft: any;
-  turnRight: any;
+  move: () => void;
+  report: () => void;
+  turnLeft: () => void;
+  turnRight: () => void;
 }
 
 export const VacuumNavigation = (props: IVacuumNavigationProps) => {
@@ -15,16 +15,36 @@ export const VacuumNavigation = (props: IVacuumNavigationProps) => {
     <Box className="navigation-box">
       <header className="place-robot-header">Vacuum Navigation</header>
       <Box className="navigation-button-box">
-        <Button variant="contained" disabled={!isPlaced} onClick={move}>
+        <Button
+          color="primary"
+          variant="contained"
+          disabled={!isPlaced}
+          onClick={move}
+        >
           Move
         </Button>
-        <Button variant="contained" disabled={!isPlaced} onClick={turnLeft}>
+        <Button
+          color="primary"
+          variant="contained"
+          disabled={!isPlaced}
+          onClick={turnLeft}
+        >
           Turn Left
         </Button>
-        <Button variant="contained" disabled={!isPlaced} onClick={turnRight}>
+        <Button
+          color="primary"
+          variant="contained"
+          disabled={!isPlaced}
+          onClick={turnRight}
+        >
           Turn Right
         </Button>
-        <Button variant="contained" disabled={!isPlaced} onClick={report}>
+        <Button
+          color="primary"
+          variant="contained"
+          disabled={!isPlaced}
+          onClick={report}
+        >
           Report
         </Button>
       </Box>

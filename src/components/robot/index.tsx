@@ -7,18 +7,13 @@ import robot from "../../robot-vacuum-cleaner.png";
 
 const Robot = () => {
   const { state } = useContext(RoboBoardContext);
-  const { positionX, face } = state;
-  const { getInvalidMoveArrow, getPositionX, getPositionY } =
-    useGetArrowDirections();
-
-  if (positionX === Infinity) {
-    return null;
-  }
+  const { face } = state;
+  const { getPositionX, getPositionY } = useGetArrowDirections();
 
   return (
     <Box
       data-testid="robot-box"
-      className={`direction-arrow robot ${getInvalidMoveArrow()}`}
+      className={`direction-arrow robot`}
       sx={{
         bottom: `${getPositionY()}`,
         left: `${getPositionX()}`,

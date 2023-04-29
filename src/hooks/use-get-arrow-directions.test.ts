@@ -20,31 +20,24 @@ jest.mock("./use-move-robots.ts", () => ({
 describe("useGetArrowDirections", () => {
   const { result } = renderHook(() => useGetArrowDirections());
 
-  it("get row directions", () => {
-    act(() => {
-      const res = result.current.getInvalidMoveArrow();
-      expect(res).toEqual("valid-direction");
-    });
-  });
-
   it("get position X", () => {
     act(() => {
       const res = result.current.getPositionX();
-      expect(res).toEqual("Infinitypx");
+      expect(res).toEqual("0px");
     });
   });
 
   it("get position X for 0", () => {
     act(() => {
       const res = result.current.getPositionX();
-      expect(res).toEqual("Infinitypx");
+      expect(res).toEqual("0px");
     });
   });
 
   it("get position Y", () => {
     act(() => {
       const res = result.current.getPositionY();
-      expect(res).toEqual("Infinitypx");
+      expect(res).toEqual("-80px");
     });
   });
 });

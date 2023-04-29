@@ -7,6 +7,7 @@ import {
   Select,
   TextField,
   Button,
+  SelectChangeEvent,
 } from "@mui/material";
 import { DIRECTION_ENUM } from "../../context/types";
 import "./commands-center.css";
@@ -46,18 +47,18 @@ export const PlaceRobotBox = (props: IPlaceRobotBoxProps) => {
     resetRobot();
   };
 
-  const handleFaceChange = (event: any) => {
+  const handleFaceChange = (event: SelectChangeEvent<string>) => {
     const value = event.target.value;
     setError(false);
     setFace(value);
   };
 
-  const handleXNumberChange = (event: any) => {
+  const handleXNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setPosX(value);
   };
 
-  const handleYNumberChange = (event: any) => {
+  const handleYNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setPosY(value);
   };
@@ -121,14 +122,14 @@ export const PlaceRobotBox = (props: IPlaceRobotBoxProps) => {
       </FormControl>
       <Box className="place-button-box">
         <Button
-          variant="outlined"
-          color="success"
+          variant="contained"
+          color="primary"
           disabled={!posX || !posY || !face}
           onClick={handlePlaceRobot}
         >
           Place Robot
         </Button>
-        <Button variant="outlined" color="error" onClick={reset}>
+        <Button variant="contained" color="error" onClick={reset}>
           Reset
         </Button>
       </Box>

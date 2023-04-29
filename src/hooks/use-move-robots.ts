@@ -51,40 +51,40 @@ export const useMoveRobots = () => {
       type: ACTIONS.SET_ROBOT,
       payload: {
         posX: -1,
-        posY: -1,
+        posY: 0,
         face: "",
       },
     });
   };
-  const move = () => {
-    if (face === DIRECTION_ENUM.NORTH) {
+  const move = (robotFace: DIRECTION_ENUM) => {
+    if (robotFace === DIRECTION_ENUM.NORTH) {
       dispatch({
         type: ACTIONS.MOVEY,
         payload: +positionY < dimension - 1 ? 1 : 0,
       });
     }
-    if (face === DIRECTION_ENUM.SOUTH) {
+    if (robotFace === DIRECTION_ENUM.SOUTH) {
       dispatch({
         type: ACTIONS.MOVEY,
         payload: +positionY > 0 ? -1 : 0,
       });
     }
-    if (face === DIRECTION_ENUM.EAST) {
+    if (robotFace === DIRECTION_ENUM.EAST) {
       dispatch({
         type: ACTIONS.MOVEX,
         payload: +positionX < dimension - 1 ? 1 : 0,
       });
     }
-    if (face === DIRECTION_ENUM.WEST) {
+    if (robotFace === DIRECTION_ENUM.WEST) {
       dispatch({
         type: ACTIONS.MOVEX,
         payload: +positionX > 0 ? -1 : 0,
       });
     }
   };
-  const turnLeft = () => {
-    let newface = face;
-    switch (face) {
+  const turnLeft = (robotFace: DIRECTION_ENUM) => {
+    let newface = robotFace;
+    switch (robotFace) {
       case DIRECTION_ENUM.WEST:
         newface = DIRECTION_ENUM.SOUTH;
         break;
@@ -98,18 +98,14 @@ export const useMoveRobots = () => {
         newface = DIRECTION_ENUM.EAST;
         break;
     }
-    dispatch({
-      type: ACTIONS.SET_COMMANDS,
-      payload: "LEFT",
-    });
     dispatch({
       type: ACTIONS.TURN,
       payload: newface,
     });
   };
-  const turnRight = () => {
-    let newface = face;
-    switch (face) {
+  const turnRight = (robotFace: DIRECTION_ENUM) => {
+    let newface = robotFace;
+    switch (robotFace) {
       case DIRECTION_ENUM.WEST:
         newface = DIRECTION_ENUM.NORTH;
         break;
@@ -123,10 +119,6 @@ export const useMoveRobots = () => {
         newface = DIRECTION_ENUM.WEST;
         break;
     }
-    dispatch({
-      type: ACTIONS.SET_COMMANDS,
-      payload: "RIGHT",
-    });
     dispatch({
       type: ACTIONS.TURN,
       payload: newface,
