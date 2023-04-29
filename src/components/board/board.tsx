@@ -18,6 +18,10 @@ const Board = (props: IBoardProps) => {
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);
+    dispatch({
+      type: ACTIONS.SET_ERROR,
+      payload: "",
+    });
   };
 
   useEffect(() => {
