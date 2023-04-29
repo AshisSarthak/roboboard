@@ -1,20 +1,23 @@
-import React, { useReducer, createContext } from "react";
-import { reducer } from "../reducer";
-import { RoboBoardState } from "./types";
+import React, { useReducer, createContext, Dispatch } from "react";
+import { ACTIONS_MAP, reducer } from "../reducer";
+import { DIRECTION_ENUM, RoboBoardState } from "./types";
 
 const initialState: RoboBoardState = {
-  positionX: Infinity,
-  positionY: Infinity,
+  positionX: 0,
+  positionY: -1,
+  face: DIRECTION_ENUM.NORTH,
   dimension: 5,
+  isPlaced: false,
 };
 
 interface RoboBoardContextProps {
   state: RoboBoardState;
-  dispatch?: any;
+  dispatch: Dispatch<ACTIONS_MAP>;
 }
 
 const RoboBoardContext = createContext<RoboBoardContextProps>({
   state: initialState,
+  dispatch: () => {},
 });
 RoboBoardContext.displayName = "RoboBoardContext";
 

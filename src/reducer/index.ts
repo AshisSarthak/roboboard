@@ -2,7 +2,12 @@ import { RoboBoardState } from "../context/types";
 import { OUT_OF_BOUND } from "../utils/constants";
 import { ACTIONS } from "./actions";
 
-export const reducer = (state: RoboBoardState, action: any) => {
+export type ACTIONS_MAP = {
+  type: ACTIONS;
+  payload: any;
+};
+
+export const reducer = (state: RoboBoardState, action: ACTIONS_MAP) => {
   switch (action.type) {
     case ACTIONS.SET_ROBOT: {
       const { posX, posY, face } = action.payload;
@@ -19,7 +24,6 @@ export const reducer = (state: RoboBoardState, action: any) => {
         positionX: state.positionX + action.payload,
         ...(action.payload !== 0
           ? {
-              userGivenCommands: [...(state?.userGivenCommands || []), "MOVE"],
               error: "",
             }
           : {
@@ -32,7 +36,6 @@ export const reducer = (state: RoboBoardState, action: any) => {
         positionY: state.positionY + action.payload,
         ...(action.payload !== 0
           ? {
-              userGivenCommands: [...(state?.userGivenCommands || []), "MOVE"],
               error: "",
             }
           : {
@@ -49,18 +52,15 @@ export const reducer = (state: RoboBoardState, action: any) => {
         ...state,
         dimension: action.payload,
       };
-    case ACTIONS.SET_COMMANDS:
-      return {
-        ...state,
-        userGivenCommands: [
-          ...(state?.userGivenCommands || []),
-          action.payload,
-        ],
-      };
     case ACTIONS.SET_ERROR:
       return {
         ...state,
         error: action.payload,
+      };
+    case ACTIONS.IS_PLACED:
+      return {
+        ...state,
+        isPlaced: action.payload,
       };
     default:
       return { ...state };

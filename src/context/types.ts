@@ -10,7 +10,6 @@ export interface RoboBoardState {
   positionY: number;
   face?: DIRECTION_ENUM;
   dimension: number;
-  commands?: Array<string>;
-  userGivenCommands?: Array<string>;
+  isPlaced: boolean;
   error?: string;
 }

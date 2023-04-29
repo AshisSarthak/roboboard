@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders APP 1`] = `
+<DocumentFragment>
+  <div
+    class="container-box MuiBox-root css-0"
+  >
+    <div
+      class="commands-container MuiBox-root css-0"
+    >
+      <header
+        class="page-header"
+      >
+        Robot Vacuum Cleaner
+      </header>
+      <div
+        class="commands-box MuiBox-root css-0"
+      >
+        <div
+          class="place-robot-box MuiBox-root css-0"
+        >
+          <header
+            class="place-robot-header"
+          >
+            Place Robot
+          </header>
+          <div
+            class="coordinate-box MuiBox-root css-0"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root css-1g1iitx-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                for="robot-x"
+                id="robot-x-label"
+              >
+                Enter X
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                >
+                   *
+                </span>
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                  id="robot-x"
+                  required=""
+                  type="number"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="css-yjsfm1"
+                  >
+                    <span>
+                      Enter X *
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+            <div
+              class="MuiFormControl-root MuiTextField-root css-1g1iitx-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                for="robot-Y"
+                id="robot-Y-label"
+              >
+                Enter Y
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                >
+                   *
+                </span>
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              >
+                <input
+                  aria-invalid="false"
+                  class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                  id="robot-Y"
+                  required=""
+                  type="number"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="css-yjsfm1"
+                  >
+                    <span>
+                      Enter Y *
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root css-q8hpuo-MuiFormControl-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              id="robot-face"
+            >
+              Enter Face Direction
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+              required=""
+            >
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="robot-face robot-face"
+                class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                id="robot-face"
+                role="button"
+                tabindex="0"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </div>
+              <input
+                aria-hidden="true"
+                aria-invalid="false"
+                class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                required=""
+                tabindex="-1"
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                data-testid="ArrowDropDownIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-yjsfm1"
+                >
+                  <span>
+                    Enter Face Direction *
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            class="place-button-box MuiBox-root css-0"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              Place Robot
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1sszw6i-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Reset
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="navigation-box MuiBox-root css-0"
+        >
+          <header
+            class="place-robot-header"
+          >
+            Vacuum Navigation
+          </header>
+          <div
+            class="navigation-button-box MuiBox-root css-0"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              Move
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              Turn Left
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              Turn Right
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              Report
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="board-container MuiBox-root css-0"
+    >
+      <div
+        class="board-box MuiBox-root css-87jy3b"
+      >
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="grid-boxes MuiBox-root css-1qpslqa"
+        />
+        <div
+          class="direction-arrow robot MuiBox-root css-vh7mn0"
+          data-testid="robot-box"
+        >
+          <img
+            alt=""
+            class="north"
+            src="robot-vacuum-cleaner.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

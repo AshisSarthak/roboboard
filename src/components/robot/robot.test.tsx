@@ -4,6 +4,6 @@ import Robot from ".";
 
 test("rendersRobotBox", () => {
   const { asFragment } = render(<Robot />);
-  expect(screen.queryByTestId("robot-box")).toBeFalsy();
+  expect(screen.getByTestId("robot-box")).toBeInTheDocument();
   expect(asFragment()).toMatchSnapshot();
 });

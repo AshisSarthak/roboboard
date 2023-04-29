@@ -8,7 +8,9 @@
 }
 
 .board-container {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .instructions {
@@ -26,4 +28,8 @@
   background-color: orange;
   color: white;
   text-align: center;
+}
+
+.grid-boxes:nth-child(2n + 1) {
+  background-color: #90e0ef;
 }

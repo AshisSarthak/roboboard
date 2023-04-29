@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`rendersRobotBox 1`] = `<DocumentFragment />`;
+exports[`rendersRobotBox 1`] = `
+<DocumentFragment>
+  <div
+    class="direction-arrow robot MuiBox-root css-vh7mn0"
+    data-testid="robot-box"
+  >
+    <img
+      alt=""
+      class="north"
+      src="robot-vacuum-cleaner.png"
+    />
+  </div>
+</DocumentFragment>
+`;
