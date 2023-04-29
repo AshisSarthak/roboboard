@@ -50,8 +50,8 @@ export const useMoveRobots = () => {
     dispatch({
       type: ACTIONS.SET_ROBOT,
       payload: {
-        posX: -1,
-        posY: 0,
+        posX: 0,
+        posY: -1,
         face: "",
       },
     });
