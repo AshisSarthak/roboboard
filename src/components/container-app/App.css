@@ -11,11 +11,6 @@ body,
 
 .container-box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-@media (max-width: 400px) {
-  .container-box {
-    grid-template-columns: none;
-  }
+  max-width: 600px;
+  margin: 0 auto;
 }
