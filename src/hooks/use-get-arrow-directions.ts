@@ -8,14 +8,14 @@ export const useGetArrowDirections = () => {
 
   const getPositionX = () => {
     if (positionX) {
-      return `${positionX * 80}px`;
+      return `${positionX * 4}rem`;
     }
     return "0px";
   };
 
   const getPositionY = () => {
     if (positionY) {
-      return `${positionY * 80}px`;
+      return `${positionY * 4}rem`;
     }
     return "0px";
   };
