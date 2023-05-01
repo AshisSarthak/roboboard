@@ -6,34 +6,18 @@
 }
 
 .commands-container {
-  box-shadow: 1px 2px 8px #0077b6;
-  margin-inline: 5px;
-}
-
-.commands-box {
-  display: grid;
-  grid-template-columns: minmax(80px, 1fr) 1fr;
-}
-
-@media (max-width: 400px) {
-  .commands-box {
-    grid-template-columns: auto;
-    width: 90%;
-    margin-left: 5%;
-  }
-  .place-robot-box {
-    border-bottom: 1px solid #0077b6;
-    border-right: none !important;
-  }
+  border: 1px solid #0077b6;
+  margin: 5px;
+  margin-bottom: 10px;
 }
 
 .place-robot-box {
-  border-right: 1px solid #0077b6;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 10px;
+  border-bottom: 1px solid #0077b6;
 }
 
 .coordinate-box {

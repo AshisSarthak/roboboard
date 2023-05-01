@@ -46,8 +46,8 @@ const Board = (props: IBoardProps) => {
             key={i * dimension + j}
             className="grid-boxes"
             sx={{
-              height: "80px",
-              width: "80px",
+              height: "4rem",
+              width: "4rem",
             }}
           ></Box>
         );
@@ -68,9 +68,9 @@ const Board = (props: IBoardProps) => {
       <Box
         className="board-box"
         sx={{
-          gridTemplateColumns: `repeat(${dimension}, 80px)`,
-          height: `${dimension * 80}px`,
-          width: `${dimension * 80}px`,
+          gridTemplateColumns: `repeat(${dimension}, 4rem)`,
+          height: `${dimension * 4}rem`,
+          width: `${dimension * 4}rem`,
         }}
       >
         {createBoxes()}

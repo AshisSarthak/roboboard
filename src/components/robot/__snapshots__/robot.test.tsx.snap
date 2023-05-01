@@ -3,7 +3,7 @@
 exports[`rendersRobotBox 1`] = `
 <DocumentFragment>
   <div
-    class="direction-arrow robot MuiBox-root css-vh7mn0"
+    class="direction-arrow robot MuiBox-root css-v399b5"
     data-testid="robot-box"
   >
     <img

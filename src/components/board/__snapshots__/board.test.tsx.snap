@@ -6,85 +6,85 @@ exports[`renders APP 1`] = `
     class="board-container MuiBox-root css-0"
   >
     <div
-      class="board-box MuiBox-root css-87jy3b"
+      class="board-box MuiBox-root css-khhqah"
     >
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="grid-boxes MuiBox-root css-1qpslqa"
+        class="grid-boxes MuiBox-root css-1n6owbc"
       />
       <div
-        class="direction-arrow robot MuiBox-root css-vh7mn0"
+        class="direction-arrow robot MuiBox-root css-v399b5"
         data-testid="robot-box"
       >
         <img

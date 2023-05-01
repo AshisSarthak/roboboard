@@ -3,6 +3,7 @@ body,
 #root {
   height: 100%;
   width: 100%;
+  font-size: 1em;
 }
 .robo-header {
   padding: 10px;
@@ -10,13 +11,11 @@ body,
 
 .container-box {
   display: grid;
-  height: 100%;
-  grid-template-rows: minmax(80px, 1fr) 2fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 400px) {
   .container-box {
-    grid-template-rows: 1fr;
-    row-gap: 10px;
+    grid-template-columns: none;
   }
 }

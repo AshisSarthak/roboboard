@@ -26,14 +26,14 @@
 }
 
 .robot {
-  height: 80px;
-  width: 80px;
+  height: 4rem;
+  width: 4rem;
   position: absolute;
   transition: all 1s ease 0s;
 }
 
 img {
-  height: 80px;
-  width: 80px;
+  height: 4rem;
+  width: 4rem;
   transition: all 1s ease 0s;
 }

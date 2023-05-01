@@ -37,7 +37,7 @@ describe("useGetArrowDirections", () => {
   it("get position Y", () => {
     act(() => {
       const res = result.current.getPositionY();
-      expect(res).toEqual("-80px");
+      expect(res).toEqual("-4rem");
     });
   });
 });
