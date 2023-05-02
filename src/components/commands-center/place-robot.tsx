@@ -72,6 +72,8 @@ export const PlaceRobotBox = (props: IPlaceRobotBoxProps) => {
       setErrorY(!(+posY >= 0 && +posY < dimension));
     } else {
       placeRobot(+posX, +posY, face);
+      setErrorX(false);
+      setErrorY(false);
     }
   };
 
@@ -88,7 +90,9 @@ export const PlaceRobotBox = (props: IPlaceRobotBoxProps) => {
           required
           type="number"
           onChange={handleXNumberChange}
-          {...(errorX && { helperText: INVALID_ROBOT_X })}
+          {...(errorX && {
+            helperText: `${INVALID_ROBOT_X} (0-${dimension - 1})`,
+          })}
         />
         <TextField
           sx={{ width: "50%" }}
@@ -99,7 +103,9 @@ export const PlaceRobotBox = (props: IPlaceRobotBoxProps) => {
           required
           type="number"
           onChange={handleYNumberChange}
-          {...(errorY && { helperText: INVALID_ROBOT_Y })}
+          {...(errorY && {
+            helperText: `${INVALID_ROBOT_Y} (0-${dimension - 1})`,
+          })}
         />
       </Box>
       <FormControl sx={{ width: "100%" }} error={error}>
